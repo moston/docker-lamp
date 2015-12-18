@@ -45,5 +45,3 @@ EXPOSE 80 443
 ################################################################################
 
 CMD /usr/bin/supervisord
-
-# ENTRYPOINT ["/usr/bin/supervisord"]

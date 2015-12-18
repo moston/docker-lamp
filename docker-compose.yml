@@ -1,5 +1,6 @@
 front:
   build: .
+  hostname: nvm
   ports:
     - "8080:80"
     - "4430:443"
@@ -9,7 +10,9 @@ front:
     - redis:redis
   volumes:
     - ./www:/var/www/html
+    - ./sites:/etc/apache2/sites-enabled
     - ./logs:/var/log/supervisor
+
 mysql:
   image: mysql
   ports:
