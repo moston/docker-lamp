@@ -1,0 +1,23 @@
+front:
+  build: .
+  ports:
+    - "8080:80"
+    - "4430:443"
+    - "9000:9000"
+  links:
+    - mysql:mysql
+    - redis:redis
+  volumes:
+    - ./www:/var/www/html
+    - ./logs:/var/log/supervisor
+mysql:
+  image: mysql
+  ports:
+    - "3900:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+
+redis:
+  image: redis
+  ports:
+    - "63790:6379"
