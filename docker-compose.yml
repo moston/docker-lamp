@@ -1,6 +1,6 @@
 front:
   build: .
-  hostname: nvm
+  hostname: databarracks
   ports:
     - "8080:80"
     - "4430:443"
